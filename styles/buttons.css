@@ -1,0 +1,51 @@
+.btn-default{
+    border-radius: var(--radius-1);
+    color: var(--color-grey-2);
+    padding: 0 14px;
+    height: 32px;
+    cursor: pointer;
+    border: none;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-register-value{
+    background-color: var(--color-brand-1);
+    color: var(--color-mode);
+    border: none;
+    transition: 0.4s;
+}
+
+.btn-register-value:hover{
+    background-color: var(--color-brand-2);
+}
+
+.select-category{
+    border: 1.5px solid var(--color-grey-5);
+    background-color: transparent;
+    transition: 0.3s;
+}
+
+.select-category:hover{
+    border: 1.5px solid var(--color-brand-1);
+}
+
+.selected-category{
+    border: 1.5px solid var(--color-brand-1);
+    background-color: ;
+}
+
+.category-span{
+    border-radius: var(--radius-1);
+    color: var(--color-grey-2);
+    padding: 0 14px;
+    height: 32px;
+    border: none;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-grey-4);
+}

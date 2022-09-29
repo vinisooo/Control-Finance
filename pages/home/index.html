@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Finance</title>
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Control Finance - Seu controle financeiro">
+    <link rel="stylesheet" href="/styles/globalStyles.css">
+    <link rel="stylesheet" href="/styles/flex.css">
+    <link rel="stylesheet" href="/styles/text.css">
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/buttons.css">
+    <link rel="stylesheet" href="/styles/modal.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header class="main-header flex justify-center align-center">
+        <div class="header-content container flex justify-between align-center">
+            <h1 class="header-logo">Control<span> Finance</span></h1>
+            <button id="modal-toggle-btn" class="btn-default btn-register-value">Registrar novo valor</button>
+        </div>
+    </header>
+
+    <!-- APP -->
+    <main id="app" class="main-content container">
+        <header class="app-header flex direction-column">
+            <div class="nav-header flex justify-between align-center">
+                <h2>Resumo Financeiro</h2>
+                <nav class="categories-nav">
+                    <ul class="flex">
+                        <li><button value="insertedValues" id="change-category" class="btn-default select-category selected-category">Todos</button></li>
+                        <li><button value="cashIn" id="change-category" class="btn-default select-category">Entradas</button></li>
+                        <li><button value="cashOut" id="change-category" class="btn-default select-category">Saídas</button></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="list-default sum-header flex justify-between align-center">
+                <h3>Soma dos Valores</h3>
+                <span>R$ 0,00</span>
+            </div>
+        </header>
+
+        <ul id="statement-list" class="statement-list flex direction-column">
+
+            <!-- STATEMENT LIST GOES HERE -->
+
+        </ul>
+
+    </main>
+
+    <!-- MODAL -->
+    <section class="add-value-modal-bg flex align-center justify-center hidden">
+        <div class="add-value-modal flex direction-column justify-between">
+
+            <header class="modal-header flex justify-between align-center">
+                <h3>Registro de valor</h3>
+                <button id="modal-toggle-btn" class="btn-default close-icon">X</button>
+            </header>
+
+            <p class="p-default">Digite o valor e em seguida aperte no botão referente ao tipo de valor</p>
+
+            <form class="add-new-value flex direction-column justify-between">
+                <div>
+                    <label for="new-value">valor</label>
+                    <div class="new-value-input flex align-center">
+                        <span>R$</span>
+                        <input id="new-value" type="number" placeholder="00.00" required>
+                    </div> 
+                </div>
+                <div class="value-type flex align-center">
+                    <label>Tipo de valor</label>
+                    <button id="change-category" class="select-category btn-default" type="button">Entrada</button>
+                    <button id="change-category" class="select-category btn-default" type="button">Saída</button>
+                </div>
+
+                <div class="submit flex justify-end">
+                    <button id="modal-toggle-btn" class="btn-default mobile-default-btn">Cancelar</button>
+                    <button class="btn-default btn-register-value mobile-default-btn">Inserir Valor</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script src="/scripts/modal.js"></script>
+    <script src="valuesData.js"></script>
+    <script src="index.js"></script>
+    <script src="/scripts/categories.js"></script>
+    <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@600&display=swap");
+
+.close-icon{
+    font-family: var(--font-family-2);
+}
+
+.p-default{
+    line-height: var(--font-line-height-1);
+    color: var(--color-grey-2);
+    font-size: var(--font-size-3);
+}
+
+.header-logo{
+    font-weight: var(--font-weight-1);
+    font-size: var(--font-size-1);
+    cursor: pointer;
+    color: var(--color-brand-1);
+}
+
+.header-logo span{
+    color: var(--color-grey-1) !important;
+}
+
+.add-new-value label{
+    font-size: var(--font-size-3);
+    font-weight: 500;
+    color: var(--color-grey-1);
+}

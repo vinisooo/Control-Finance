@@ -1,0 +1,87 @@
+.hidden{
+    display: none;
+}
+
+.add-value-modal-bg{
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-grey-1-opacity-5);
+    z-index: 2;
+    position: fixed;
+    top: 0;
+}
+
+.add-value-modal{
+    width: 428px;
+    height: 350px;
+    max-height: 100vh;
+    max-width: 100%;
+    margin: 20px;
+    background-color: var(--color-mode);
+    border-radius: var(--radius-1);
+    padding: 20px;
+    animation: displayModal 0.7s ease;
+}
+
+.modal-header h3{
+    font-weight: 600;
+    color: var(--color-grey-1);
+    font-size: var(--font-size-1);
+}
+
+.submit{
+    width: 100%;
+    gap: var(--font-size-2);
+}
+
+.add-new-value{
+    height: 58%;
+}
+
+.new-value-input{
+    border: 1.5px solid var(--color-grey-3);
+    height: 44px;
+    padding: 0 10px;
+    border-radius: var(--radius-1);
+    margin-top: 10px;
+}
+
+.new-value-input:focus{
+    border: var(--color-brand-1);
+}
+
+.new-value-input span{
+    font-weight: 500;
+    font-size: var(--font-size-3);
+    color: var(--color-grey-2);
+}
+
+.new-value-input input{
+    border: none;
+    padding: 0 var(--font-size-2);
+    font-size: var(--font-size-2);
+    width: 100%;
+    outline: none;
+}
+
+.value-type{
+    gap: 12px;
+}
+
+/* REMOVING ARROWS FROM NUMBER INPUT */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@keyframes displayModal {
+    0%{
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
