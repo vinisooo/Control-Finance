@@ -42,9 +42,9 @@ submitValueBtn.addEventListener("click",addNewValue);
 function addNewValue (event){
     event.preventDefault();
 
-    const newValue = document.getElementById("new-value");
-    const newValueNum = parseFloat(newValue.value);
-    if (newValueNum != NaN && newValue != false && newValueNum != "" && newValueNum != 0 && categoryID != 0){
+    const newValue = document.getElementById("new-value").value;
+    const newValueNum = parseFloat(newValue);
+    if (newValue.length != 0 && newValueNum != 0 && categoryID != 0){
          
         let newID = 0
         if (insertedValues.length == 0){
