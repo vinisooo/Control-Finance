@@ -44,7 +44,7 @@ function addNewValue (event){
 
     const newValue = document.getElementById("new-value");
     const newValueNum = parseFloat(newValue.value);
-    if (newValue != "" && categoryID != 0){
+    if (newValueNum != NaN && categoryID != 0){
          
         let newID = 0
         if (insertedValues.length == 0){
@@ -54,7 +54,6 @@ function addNewValue (event){
             const listLength = insertedValues.length -1;
             newID = insertedValues[listLength].id + 1;
         }
-        
 
         const newObj =
         {
@@ -62,7 +61,6 @@ function addNewValue (event){
             value : newValueNum,
             categoryID : categoryID
         };
-
 
         insertedValues.push(newObj);
         displayElementList(insertedValues);
