@@ -1,6 +1,7 @@
 /* Desenvolva sua lógica aqui */
 const modal = document.getElementsByClassName("add-value-modal-bg")[0];
 const toggleModalBtn = document.querySelectorAll("#modal-toggle-btn");
+const modalForm = document.getElementById("add-value-form");
 
 function toggleModal (event){
     event.preventDefault();
@@ -69,6 +70,7 @@ function addNewValue (event){
         categoryID = 0;
         
         modal.classList.toggle("hidden");
-    }
-
+        modalForm.reset();
+    }   
+    
 }
