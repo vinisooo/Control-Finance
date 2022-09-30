@@ -20,7 +20,7 @@
     background-color: var(--color-mode);
     border-radius: var(--radius-1);
     padding: 20px;
-    animation: displayModal 0.7s ease;
+    animation: displayModal var(--animation-duration) var(--animation-type);
 }
 
 .modal-header h3{
@@ -44,6 +44,10 @@
     padding: 0 10px;
     border-radius: var(--radius-1);
     margin-top: 10px;
+}
+
+.new-value-input:hover{
+    border: 1.5px solid var(--color-brand-1);
 }
 
 .new-value-input:focus{

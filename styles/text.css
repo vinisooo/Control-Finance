@@ -4,21 +4,15 @@
     font-family: var(--font-family-2);
 }
 
-.p-default{
-    line-height: var(--font-line-height-1);
-    color: var(--color-grey-2);
-    font-size: var(--font-size-3);
-}
-
 .header-logo{
+    font-style: normal;
     font-weight: var(--font-weight-1);
-    font-size: var(--font-size-1);
-    cursor: pointer;
-    color: var(--color-brand-1);
+    font-size: 20px;
+    line-height: 39px;
 }
 
 .header-logo span{
-    color: var(--color-grey-1) !important;
+    color: var(--color-brand-1) !important;
 }
 
 .add-new-value label{
@@ -26,3 +20,64 @@
     font-weight: 500;
     color: var(--color-grey-1);
 }
+
+.header-list-title-1{
+    font-style: normal;
+    font-weight: var(--font-weight-2);
+    font-size: var(--font-size-2);
+    line-height: 19px;
+    color: var(--color-grey-1);
+}
+
+.header-list-title-2{
+    font-style: normal;
+    font-weight: var(--font-weight-1);
+    font-size: var(--font-size-3);
+    line-height: 19px;
+    color: var(--color-grey-1);
+}
+
+.total-value{
+    color: var(--color-grey-1);
+    font-weight: var(--font-weight-1);
+}
+
+.value{
+    font-size: var(--font-size-3);
+    font-weight: var(--font-weight-2);
+}
+
+.modal-text{
+    font-style: normal;
+    font-weight: var(--font-weight-3);
+    font-size: var(--font-size-3);
+    line-height: 150%;
+    color: var(--color-grey-2);
+}
+
+.add-new-value label{
+    font-style: normal;
+    font-weight: var(--font-weight-2);
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.warning-empty-title{
+    font-style: normal;
+    font-weight: var(--font-weight-1);
+    font-size: var(--font-size-2);
+    line-height: 19px;
+}
+
+.warning-cta{
+    font-style: normal;
+    font-weight: var(--font-weight-2);
+    font-size: var(--font-size-3);
+    line-height: 17px;
+    color: var(--color-grey-2);
+}
+
+#new-value::placeholder{
+    font-family: var(--font-family-1);
+}
+

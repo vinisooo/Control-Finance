@@ -11,7 +11,6 @@ function displayElementList(array){
     }
 
     array.forEach(obj => {
-        
 
         const newLi = document.createElement("li");
         const value = document.createElement("h3");
@@ -20,8 +19,9 @@ function displayElementList(array){
         const deleteBtn = document.createElement("button");
         const thrashAnimatedIcon = document.createElement("lordicon");
 
-        newLi.classList = "list-default flex justify-between align-center"
+        newLi.classList = "element-list list-default flex justify-between align-center"
         newLi.id = obj.id
+        value.classList = "value"
         span.classList = "category-span"
         div.classList = "right-side flex align-center"
         deleteBtn.classList = "delete-element flex justify-center align-center"
@@ -70,10 +70,12 @@ function createWarningEmpty(ul){
     const warningText = document.createElement("h3");
     const cta = document.createElement("p");
 
-    warning.classList = "empty-list-warning flex list-default direction-column align-center justify-between"
-    
-    warningText.innerText = "Nenhum Valor cadastrado"
-    cta.innerText = "Registrar novo valor"
+    warning.classList = "empty-list-warning flex list-default direction-column align-center justify-between";
+    warningText.classList = "warning-empty-title"
+    cta.classList = ""
+
+    warningText.innerText = "Nenhum Valor cadastrado";
+    cta.innerText = "Registrar novo valor";
 
     warning.append(warningText, cta)
     ul.append(warning)

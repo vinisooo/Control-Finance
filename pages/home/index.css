@@ -1,7 +1,7 @@
 /* Desenvolva a estilização da sua página aqui */
 
 .main-content{
-    padding-top: 180px;
+    padding-top: 162px;
     max-width: 100%;
 }
 
@@ -11,7 +11,7 @@
 }
 
 .app-header{
-    gap: 50px;
+    gap: 37px;
 }
 
 .sum-header{
@@ -25,34 +25,23 @@
     border: 1.5px solid var(--color-grey-4);
     border-radius: var(--radius-1);
     max-width: 100%;
-}
-
-.delete-element{
-    height: 26px;
-    cursor: pointer;
-    padding: 2px;
-    background-color: transparent;
-    border: 1.5px solid var(--color-grey-5);
-    border-radius: var(--radius-2);
-}
-
-.delete-element-icon{
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    opacity: 50%;
-}
-
-.delete-element-icon:hover{
-    opacity: 1;
+    height: 42px;
 }
 
 .right-side{
-    gap: 20px;
+    gap: 31px;
 }
 
 .statement-list{
     gap: 20px;
+}
+
+.element-list{
+    transition: var(--animation-duration);
+}
+
+.element-list:hover{
+    border: 1.5px solid var(--color-brand-1);
 }
 
 .empty-list-warning{

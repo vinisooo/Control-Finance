@@ -42,8 +42,8 @@ submitValueBtn.addEventListener("click",addNewValue);
 function addNewValue (event){
     event.preventDefault();
 
-    const newValue = document.getElementById("new-value").value;
-    const newValueNum = parseFloat(newValue);
+    const newValue = document.getElementById("new-value");
+    const newValueNum = parseFloat(newValue.value);
     if (newValue != "" && categoryID != 0){
          
         let newID = 0
@@ -63,12 +63,13 @@ function addNewValue (event){
             categoryID : categoryID
         };
 
+
         insertedValues.push(newObj);
         displayElementList(insertedValues);
 
         displayByCategory();
         categoryID = 0;
-
+        
         modal.classList.toggle("hidden");
     }
 
