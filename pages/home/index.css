@@ -55,6 +55,13 @@
     gap: 20px;
 }
 
+.empty-list-warning{
+    background-color: var(--color-grey-5);
+    border: 1.5px dashed  var(--color-grey-3);
+    border-radius: var(--radius-1);
+    height: 84px;
+}
+
 @media (max-width:600px) {
 
     .main-content{
@@ -76,6 +83,10 @@
 
     .value-type{
         flex-direction: column;
+    }
+
+    .value-type .btn-default{
+        width: 100%;
     }
 
     .selected-category{

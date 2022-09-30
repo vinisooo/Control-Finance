@@ -24,16 +24,31 @@ function filterCategory(event){
         displayElementList(insertedValues);
     }
 
-    if (category.value == "insertedValues"){
-        displayElementList(insertedValues);
-    }
-
     if (category.value == "cashIn"){
         cashIn = insertedValues.filter((element)=>{
             return element.categoryID == 1
         })
         displayElementList(cashIn);
     }if (category.value == "cashOut"){
+        cashOut = insertedValues.filter((element)=>{
+            return element.categoryID == 2
+        })
+        displayElementList(cashOut);
+    }
+}
+
+
+function displayByCategory(){
+    const currentCategory = document.getElementsByClassName("selected-category")[0];
+    if(currentCategory.value == "insertedValues"){
+        displayElementList(insertedValues);
+    }
+    if (currentCategory.value == "cashIn"){
+        cashIn = insertedValues.filter((element)=>{
+            return element.categoryID == 1
+        })
+        displayElementList(cashIn);
+    }if (currentCategory.value == "cashOut"){
         cashOut = insertedValues.filter((element)=>{
             return element.categoryID == 2
         })

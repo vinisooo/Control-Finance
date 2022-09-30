@@ -1,7 +1,14 @@
 const list = document.getElementById("statement-list");
+const totalValueSpan = document.getElementById("total-value");
 
 function displayElementList(array){
     list.innerHTML = "";
+    
+    if (array.length == 0){
+        createWarningEmpty(list)
+
+        totalValueSpan.innerText = "R$ 00.00"
+    }
 
     array.forEach(obj => {
         
@@ -42,22 +49,9 @@ function displayElementList(array){
                     insertedValues.splice(index, 1)
                 }
             })
-            const currentCategory = document.getElementsByClassName("selected-category")[0];
-            if(currentCategory.value == "insertedValues"){
-                displayElementList(insertedValues);
-            }
-            if (currentCategory.value == "cashIn"){
-                cashIn = insertedValues.filter((element)=>{
-                    return element.categoryID == 1
-                })
-                displayElementList(cashIn);
-            }if (currentCategory.value == "cashOut"){
-                cashOut = insertedValues.filter((element)=>{
-                    return element.categoryID == 2
-                })
-                displayElementList(cashOut);
-            }
+            displayByCategory();
         })
+        totalValueSum(array);
 
         deleteBtn.append(thrashAnimatedIcon);
         div.append(span, deleteBtn);
@@ -66,5 +60,33 @@ function displayElementList(array){
     });
     
 }
-
 displayElementList(insertedValues);
+
+
+function createWarningEmpty(ul){
+    ul.innerHTML = "";
+
+    const warning = document.createElement("li");
+    const warningText = document.createElement("h3");
+    const cta = document.createElement("p");
+
+    warning.classList = "empty-list-warning flex list-default direction-column align-center justify-between"
+    
+    warningText.innerText = "Nenhum Valor cadastrado"
+    cta.innerText = "Registrar novo valor"
+
+    warning.append(warningText, cta)
+    ul.append(warning)
+}
+
+
+function totalValueSum(array){
+
+    let totalValue = 0;
+    array.forEach((obj) =>{
+        totalValue += obj.value
+    })
+    
+    totalValueSpan.innerText = "R$ " + totalValue.toFixed(2);
+    return totalValue.toFixed(2);
+}

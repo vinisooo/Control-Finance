@@ -11,6 +11,14 @@
     align-items: center;
 }
 
+.btn-default-hover{
+    transition: var(--animation-duration);
+}
+
+.btn-default-hover:hover{
+    background-color: var(--color-grey-4);
+}
+
 .btn-register-value{
     background-color: var(--color-brand-1);
     color: var(--color-mode);
@@ -25,7 +33,7 @@
 .select-category{
     border: 1.5px solid var(--color-grey-5);
     background-color: transparent;
-    transition: 0.3s;
+    transition: var(--animation-duration);
 }
 
 .select-category:hover{
@@ -34,7 +42,7 @@
 
 .selected-category{
     border: 1.5px solid var(--color-brand-1);
-    background-color: ;
+    background-color: var(--color-brand-3);
 }
 
 .category-span{
