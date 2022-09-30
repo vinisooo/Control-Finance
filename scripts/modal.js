@@ -44,7 +44,7 @@ function addNewValue (event){
 
     const newValue = document.getElementById("new-value");
     const newValueNum = parseFloat(newValue.value);
-    if (newValueNum != NaN && categoryID != 0){
+    if (newValueNum != NaN && newValue != false && newValueNum != "" && newValueNum != 0 && categoryID != 0){
          
         let newID = 0
         if (insertedValues.length == 0){
